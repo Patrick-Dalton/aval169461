@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.crypto.Data;
+
 public class ProdutoDao {
 	
 	private static final String SQL_BUSCA_TODOS = "SELECT * FROM PRODUTO";
@@ -26,6 +28,7 @@ public class ProdutoDao {
 				p.setNomeProduto(rs.getString(1));
 				p.setCodigoProduto(rs.getLong(2));
 				p.setValor(rs.getInt(3));
+				p.setDatadeentrada(rs.getDate(4));
 				lista.add(p);
 			}
 			
